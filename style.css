@@ -1,0 +1,100 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --Warning: #FF0000;
+    --fontFamily: sans-serif;
+    --borderInput: rgb(216, 216, 216);
+    --boxShadow: rgb(133, 133, 133);
+    --bg1: #76BFFD;
+    --bg2: #80E9ED;
+}
+
+body {
+    font-family: var(--fontFamily);
+    background: linear-gradient(80deg, var(--bg1), var(--bg2));
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 20px 0px var(--boxShadow);
+}
+
+form .inputBloc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form .inputBloc input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--borderInput);
+}
+
+form .inputBloc .inputpass {
+    position: relative;
+    width: 100%;
+}
+
+form .inputBloc .inputpass #btnView {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 39.5px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid var(--borderInput);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .inputBloc p {
+    color: var(--Warning);
+    display: none;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(80deg, var(--bg1), var(--bg2));
+    font-size: 18px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: linear-gradient(0deg, var(--bg1), var(--bg2));
+}
+
+form .inputBloc .activeInput {
+    border: 1px solid var(--Warning);
+    box-shadow: 0px 0px 10px 0px rgb(250, 133, 133);
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulaire d'inscription</h1>
+    <form action="">
+        <div class="inputBloc">
+            <label for="name">Nom :</label>
+            <input type="text" id="name">
+            <p id="warningName" class="warningMessage">le nom doit contenir au moins 3 caractères.</p>
+        </div>
+        <div class="inputBloc">
+            <label for="firstname">Prénom :</label>
+            <input type="text" id="firstname">
+            <p id="warningFirstname" class="warningMessage">Le prénom doit au moins contenir 2 caractères.</p>
+        </div>
+        <div class="inputBloc">
+            <label for="email">Email :</label>
+            <input type="email" id="email">
+            <p id="warningEmail" class="warningMessage">Veuillez entrer une adresse e-mail valide.</p>
+        </div>
+        <div class="inputBloc">
+            <label for="password">mot de passe :</label>
+            <div class="inputpass">
+                <input type="password" id="password">
+                <div id="btnView">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                    </svg>
+                </div>
+            </div>
+            <p id="warningPassword" class="warningMessage">Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule ,un chiffre et un caractère spéciaux.</p>
+        </div>
+        <div class="inputBloc">
+            <label for="age">Âge :</label>
+            <input type="number" id="age" min="0" max="99">
+            <p id="warningAge" class="warningMessage">L'Âge doit être un nombre entre 18 et 99.</p>
+        </div>
+        <button id="btnSubmit">S'inscrire</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
