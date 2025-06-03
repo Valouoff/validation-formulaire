@@ -57,7 +57,7 @@ btnSubmit.addEventListener('click', (e) => {
         inputPassword.classList.remove('activeInput')
     }
 
-    if (inputAge.value < 18) {
+    if (inputAge.value < 18 || inputAge.value > 99) {
         warningAge.style.display = "block"
         inputAge.classList.add('activeInput')
     } else {
